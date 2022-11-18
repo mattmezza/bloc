@@ -5,16 +5,26 @@ bloc
 
 ![](bloc.gif)
 
+`bloc` edits the `/etc/hosts` file, so it needs `sudo` privileges to run.
+
 Installation
 ===
 
 Installing `bloc` is very easy: you just need to clone this very same repo at the latest release and then source the `bloc` file in your bash profile. Here's how I do it in my [dotfiles](https://github.com/mattmezza/dotfiles) (see plugins.sh and plugins.txt).
 
 ```bash
-git clone git@github.com:mattmezza/bloc.git
+git clone git@github.com:mattmezza/bloc.git && cd $_
+./bloc twitter.com
 ```
+
 Usage
 ===
+
+Some examples:
+
+- block twitter for 20 min: `bloc twitter.com && sleep 1200 && bloc -u twitter.com`
+- block work websites: `cat work.txt | xargs -n1 bloc` where `work.txt` contains a multi-line list of domains
+- block socials: `cat social.txt | while read -r i;do bloc $i; done`
 
 What follows is the output of `bloc`, accessible at any time.
 
