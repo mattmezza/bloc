@@ -1,3 +1,2 @@
 #!/bin/env bash
-#alias bloc="sudo $PACCO_DIR/bloc/bloc"
-alias bloc="sudo ~/dev/bloc/bloc"
+alias bloc="sudo $PACCO_DIR/bloc/bloc"
